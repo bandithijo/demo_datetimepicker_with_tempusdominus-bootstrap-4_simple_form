@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col px-3">
+
+    <%= form_with(model: task) do |form| %>
+      <% if task.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+          <ul>
+            <% task.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :created_at %>
+        <%= form.date_field :created_at %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :created_at, class: "form-label" %>
+        <%= form.text_field :created_at,
+          class: "form-control border border-dark datetimepicker-input",
+          id: "datetimepicker",
+          placeholder: "yyyy-mm-dd",
+          autocomplete: "off",
+          data: {
+            toggle: "datetimepicker",
+            target: "#datetimepicker"
+          } %>
+      </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+      </div>
+
+      <div class="field">
+        <%= form.label :state %>
+        <%= form.text_field :state %>
+      </div>
+
+      <div class="field">
+        <%= form.label :priority %>
+        <%= form.number_field :priority %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
