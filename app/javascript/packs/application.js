@@ -8,6 +8,19 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import "jquery"
+import "bootstrap"
+
+import "moment"
+import "tempusdominus-bootstrap-4"
+
+document.addEventListener('turbolinks:load', () => {
+  $('#datetimepicker').datetimepicker({
+    format: 'YYYY-MM-DD',
+    autoHide: true
+  });
+});
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
