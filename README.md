@@ -1,4 +1,4 @@
-# 🏗️ DEMO - Date Time Picker with tempusdominus-bootstrap-4
+# 🏗️ DEMO - Date Time Picker with tempusdominus-bootstrap-4 & simple_form
 
 ## 📑 Article
 
@@ -10,6 +10,7 @@
 
 - `Ruby 3.0.3`
 - `Rails 6.1.4`
+- `simple_form 5.1`
 
 📜 **Javascript**
 
